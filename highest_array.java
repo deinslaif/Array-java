@@ -1,19 +1,23 @@
-import java.util.*;
+import java.util.Scanner;
+import java.util.Arrays;
 
-public class highest_array {
+public class SecondHighestArray {
 
     public static void main(String[] args) {
         int[] a = new int[5];
-        Arrays.sort(a);
         Scanner r = new Scanner(System.in);
+        
         System.out.println("Enter any elements: ");
         for (int i = 0; i < a.length; i++) {
             a[i] = r.nextInt();
         }
-        System.out.println("The second highest array: ");
-        for (int i = 1; i < a.length; i++) {
-            
-        }
-        System.out.println(+a[a.length-2]);
+        
+        // Sort the array in ascending order
+        Arrays.sort(a);
+
+        // The second highest element will be at a.length - 2 index
+        int secondHighest = a[a.length - 2];
+
+        System.out.println("The second highest array: " + secondHighest);
     }
 }
